@@ -1,12 +1,17 @@
 
 import './App.css';
+import AudioReactivePatterns from './AudioReactivePatterns';
 import AudioVisualizer from './AudioVisualizer';
 
 function App() {
   return (
     <>
+    <AudioReactivePatterns 
+      audioUrl=""
+      title="My OGG Track"
+    />
       <AudioVisualizer
-        audioUrl="https://peterTheYeeter.b-cdn.net/songs/birdy.mp3"
+        audioUrl=""
         title="My OGG Track"
       />
     </>
