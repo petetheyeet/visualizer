@@ -1,0 +1,119 @@
+.audio-visualizer {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: #f3f4f6;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+  
+      h2 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #1f2937;
+        margin: 0;
+      }
+  
+      .format-badge {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+        background: #dbeafe;
+        color: #1e40af;
+        border-radius: 9999px;
+      }
+    }
+  
+    .error-message {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: #ef4444;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  
+    .visualization {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      height: 16rem; // Increased from 8rem to 16rem
+      background: rgba(0, 0, 0, 0.03);
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+  
+      .bars {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        gap: 0.25rem;
+        width: 100%;
+  
+        .bar {
+          flex: 1;
+          min-width: 0.5rem;
+          max-width: 1.5rem;
+          background: #3b82f6;
+          border-radius: 0.25rem 0.25rem 0 0;
+          transition: height 50ms ease;
+          opacity: 0.9;
+  
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+  
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 9999px;
+        cursor: pointer;
+        transition: background-color 200ms ease;
+  
+        &.play-button {
+          background: #3b82f6;
+          color: white;
+  
+          &:hover:not(:disabled) {
+            background: #2563eb;
+          }
+        }
+  
+        &.mute-button {
+          background: #e5e7eb;
+  
+          &:hover:not(:disabled) {
+            background: #d1d5db;
+          }
+        }
+  
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+    }
+  
+    .hidden {
+      display: none;
+    }
+  }
